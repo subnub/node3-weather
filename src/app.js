@@ -5,6 +5,7 @@ const app = express();
 const geocode = require("./utils/geocode");
 const forecast = require("./utils/forecast");
 
+const port = process.env.PORT || 3000;
 
 // Define paths for express config
 const publicPath = path.join(__dirname, "../public");
@@ -49,12 +50,14 @@ app.get("/help", (req, res) => {
 
 app.get("/weather", (req, res) => {
 
+    console.log("Sending Weather...");
 
     if (!req.query.address) {
 
         res.send({
             error: "You Must Provide An Address",
         })
+
         return;
     }
 
@@ -111,7 +114,8 @@ app.get("*", (req, res) => {
 })
 
 // Starts server
-app.listen(3000,() => {
+//192.168.1.122
+app.listen(port,() => {
 
     console.log("Server Started");
 });
