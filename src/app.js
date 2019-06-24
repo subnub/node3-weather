@@ -24,8 +24,8 @@ app.use(express.static(publicPath))
 app.get("", (req, res) => {
 
     res.render("index", {
-        title: "weather app",
-        name: "kyle"
+        title: "Weather App",
+        name: "Kyle Hoell"
     })
     
 })
@@ -34,17 +34,17 @@ app.get("/about", (req, res) => {
 
     res.render("about", {
 
-        title: "created by kyle",
-        name: "dog"
+        title: "About",
+        name: "Kyle Hoell"
     })
 })
 
 app.get("/help", (req, res) => {
 
-    res.render("help", {
+    res.render("Help", {
 
         title: "help title",
-        name: "cat"
+        name: "Kyle Hoell"
     })
 })
 
@@ -100,7 +100,7 @@ app.get("/weather", (req, res) => {
 app.get("/help/*", (req, res) => {
 
     res.render("404page", {
-        name: "kyle",
+        name: "Kyle Hoell",
         artical: "help actical"
     })
 })
@@ -108,7 +108,7 @@ app.get("/help/*", (req, res) => {
 app.get("*", (req, res) => {
 
     res.render("404page", {
-        name: "kyle",
+        name: "Kyle Hoell",
         artical: "page",
     })
 })

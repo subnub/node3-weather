@@ -14,6 +14,7 @@ body {
 .main-content {
 
     flex-grow: 1;
+    text-align: center;
 }
 
 footer {
@@ -65,3 +66,21 @@ button {
     color: white;
     padding: 8px;
 }
+
+#navDiv {
+
+    text-align: center;
+    padding-bottom: 36px;
+}
+
+#title {
+
+    text-align: center;
+}
+
+#githubLink {
+
+    color: #888888;
+}
+
+
